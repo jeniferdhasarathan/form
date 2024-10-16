@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Add User{% endblock %}
+
+{% block content %}
+<h2>Add User Information</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <div class="d-flex align-items-center">
+    <div class="button-lottie"></div>
+    <button type="submit" class="btn btn-custom btn-lottie">Submit</button>
+  </div>
+</form>
+{% endblock %}
